@@ -1,4 +1,4 @@
-/* Mise en page générale */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,220 +6,108 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: rgb(240, 243, 255); /* Bleu pâle clair et pastel */
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fa;
     color: #333;
-    scroll-behavior: smooth; /* Ajout du défilement fluide */
 }
 
-/* Bandeau du haut */
-.header {
-    background-color: #a2c8ff; /* Bleu clair pour le header */
-    color: white;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.header h1 {
-    font-size: 1.5rem;
-}
-
-.header nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
-.header nav ul li {
-    display: inline;
-}
-
-.header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.header nav ul li a:hover {
-    color: #ff6347;
-}
-
-/* Section Image principale */
+/* Hero Section */
 .hero {
-    margin-top: 70px; /* Décalage pour le header fixe */
-    text-align: center;
-}
-
-.hero .hero-img {
-    width: 80%; /* Ajustement de la taille */
-    max-width: 600px;
-    height: auto;
-    object-fit: cover;
-    margin: 0 auto;
-}
-
-/* Section principale - photo et description */
-.main-content {
-    padding: 60px 0;
-}
-
-.about {
-    background-color: #ffffff;
-    padding: 40px 0;
-}
-
-.about .container {
+    background-image: url('https://images.unsplash.com/photo-1654686534917-bc9b4c7a652a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NDMzMTF8MHwxfHNlYXJjaHwyfHxpbmRlcGVuZGVudCUyMHRyYWluZXJ8ZW58MHwwfDN8fDE3Mzg1MTc2Njl8MA&ixlib=rb-4.0.3&q=80&w=1080');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 40px;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
 }
 
-.about-content {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1.5rem;
 }
 
-.about-photo {
-    flex: 1;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
-.photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #0066cc;
+.hero .btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s;
 }
 
-.about-text {
-    flex: 2;
+.hero .btn:hover {
+    background-color: #0056b3;
 }
 
-.about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+/* Triple Section */
+.triple-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 8px;
 }
 
-.about-text p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
+.triple-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Section Formulaire de contact */
-.contact {
-    background-color: #ffffff;
-    padding: 40px 0;
+.triple-section .card-body {
+    padding: 1.5rem;
     text-align: center;
 }
 
-.contact h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
+.triple-section .card-body h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
+/* Responsive images */
+.section-type-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.contact-form .form-group {
+.valise-img {
     width: 100%;
     max-width: 500px;
-    text-align: left;
-}
-
-.contact-form label {
+    height: auto;
+    margin: 0 auto;
     display: block;
-    margin-bottom: 5px;
-    font-size: 1rem;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
+/* Responsivity */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
 
-.contact-form textarea {
-    resize: vertical;
-    min-height: 150px;
-}
+    .hero p {
+        font-size: 1rem;
+    }
 
-.contact-form .btn-submit {
-    background-color: #0066cc;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    .hero .btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
 
-.contact-form .btn-submit:hover {
-    background-color: #004a99;
-}
+    .triple-section .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
 
-/* Style pour la photo */
-.photo {
-    display: block; /* Assure que l'image est un bloc */
-    width: 100px; /* Largeur de l'image (tu peux ajuster à ta convenance) */
-    height: 100px; /* Hauteur de l'image, doit être égale à la largeur */
-    margin-right: 20px; /* Espace de 20px à droite de l'image */
-    margin-top: 20px; /* Espace de 20px au-dessus de l'image */
-    margin-left: auto; /* Centre l'image sur la page */
-    margin-right: auto; /* Centre l'image sur la page */
-    border-radius: 50%; /* Cela rend l'image ronde */
-    object-fit: cover; /* Assure que l'image s'ajuste bien dans le carré sans déformation */
-}
-
-/* Footer */
-footer {
-    background-color: #a2c8ff; /* Même bleu clair que le header */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-footer nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-footer nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-footer nav ul li a:hover {
-    color: #ff6347;
+    /* Ajout de styles spécifiques pour les images */
+    .valise-img {
+        max-width: 100%;
+    }
 }
