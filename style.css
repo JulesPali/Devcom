@@ -185,13 +185,15 @@ body {
 
 /* Style pour la photo */
 .photo {
-    display: block; /* Pour s'assurer que l'image est un bloc et ne s'affiche pas à côté du texte */
-    max-width: 50px; /* Limite la largeur de l'image */
+    display: block; /* Assure que l'image est un bloc */
+    width: 100px; /* Largeur de l'image (tu peux ajuster à ta convenance) */
+    height: 100px; /* Hauteur de l'image, doit être égale à la largeur */
     margin-right: 20px; /* Espace de 20px à droite de l'image */
     margin-top: 20px; /* Espace de 20px au-dessus de l'image */
     margin-left: auto; /* Centre l'image sur la page */
     margin-right: auto; /* Centre l'image sur la page */
-    border-radius: 50%; /* Arrondit l'image pour en faire une bulle */
+    border-radius: 50%; /* Cela rend l'image ronde */
+    object-fit: cover; /* Assure que l'image s'ajuste bien dans le carré sans déformation */
 }
 
 /* Footer */
