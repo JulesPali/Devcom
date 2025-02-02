@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="icon" href="#" type="image/x-icon">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="general-style.css">
     <link rel="stylesheet" href="style.css">
@@ -66,31 +66,41 @@
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="javascript:void(0)">
-                    <img src="Accueil_fichiers/logo.png" alt="Logo" width="100">
+                    <img src="#" alt="" width="100">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">À propos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#bienvenue">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#a-propos">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="bienvenue" class="hero">
             <div>
                 <h1>Bienvenue chez DevCom</h1>
-                <p>Formations en informatique adaptées à tous</p>
+                <p style="color: rgb(0, 0, 0) !important; text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.5) !important;">
+    Formations en informatique adaptées à tous
+</p>
                 <a href="#contact" class="btn btn-primary">Contactez-nous</a>
             </div>
         </section>
     </header>
+
+
+	<!-- Section avec grande image cliquable -->
+	<section class="hero-section">
+		<a href="URL_de_l_image_grande" target="_blank">
+			<img src="plaquette_v2.png" alt="Grande image" class="img-fluid w-100">
+		</a>
+	</section>
+
 
     <!-- Main Content -->
     <main class="container mt-5">
@@ -98,19 +108,19 @@
         <section class="triple-section row text-center">
             <div class="col-12 col-md-4 mb-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Python">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Logiciels">
                     <div class="card-body">
-                        <h3>Développement Python</h3>
-                        <p>Maîtrisez Python</p>
+                        <h3>Logiciels et Applications</h3>
+                        <p>Découvrez (ou re-découvrez) les logiciels les plus répandus : suite Microsoft Office, Powerpoint Excel, LibreOffice & outils web en ligne utiles pour une meilleure compréhension et utilisation dans votre quotidien à l’aide d’exemples et de bonnes pratiques.</p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Logiciels">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Python">
                     <div class="card-body">
-                        <h3>Logiciels et Applications</h3>
-                        <p>Découvrez</p>
+                        <h3>Développement Python</h3>
+                        <p>Maîtrisez Python, l'un des langages de programmation les plus demandés aujourd'hui. Que vous soyez débutant ou déjà expérimenté, mes formations sont conçues pour s'adapter à votre niveau et progresser à votre rythme. Vous apprendrez à créer des outils efficaces et à automatiser des tâches pour simplifier vos travaux.</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +129,7 @@
                     <img src="https://via.placeholder.com/150" class="card-img-top" alt="Deep Learning">
                     <div class="card-body">
                         <h3>Deep Learning</h3>
-                        <p>Plongez</p>
+                        <p>Plongez dans l'univers du deep learning. Cette formation vous permettra de comprendre les concepts clés et d'appliquer des modèles à apprentissage profond sur des données réelles, transformant ainsi vos idées en solutions concrètes. Apprenez à créer ces modèles de prédiction entraînés sur vos données. </p>
                     </div>
                 </div>
             </div>
@@ -129,10 +139,10 @@
 <section class="section-type-1 row">
     <div class="col-12 col-md-6 order-2 order-md-1">
         <h2>Un Enseignement pour Tous</h2>
-        <p>Les formations proposées chez DevCom sont ouvertes à un large éventail de public...</p>
+        <p>Les formations proposées sont ouvertes à un large éventail de public, allant des adultes souhaitant se reconvertir, aux entreprises cherchant à former leurs employés, en passant par des étudiants et des jeunes désireux de découvrir les technologies numériques de manière ludique. Chaque session est conçue pour être interactive et engageante, favorisant l’apprentissage par la pratique. </p>
     </div>
     <div class="col-12 col-md-6 order-1 order-md-2">
-        <img src="valise.png" alt="Enseignement" class="valise-img img-fluid">
+        <img src="pc.jpg" alt="Enseignement" class="valise-img img-fluid">
     </div>
 </section>
 
@@ -140,16 +150,39 @@
 <section class="section-type-2 row">
     <div class="col-12 col-md-6 order-2 order-md-1">
         <h2>Pourquoi Choisir DevCom ?</h2>
-        <p>Choisir DevCom pour votre formation...</p>
+        <p>Choisir Devcom, c'est opter pour un formateur indépendant passionné par l'informatique et l'enseignement. A l’aide de mon expérience, je m'engage à fournir des formations de qualité qui vous donneront les éléments nécessaires pour optimiser votre quotidien. Ma pédagogie dynamique et interactive garantit un apprentissage rythmé, pour offrir une expérience enrichissante et adapté à vos attentes. </p>
     </div>
     <div class="col-12 col-md-6 order-1 order-md-2">
-        <img src="valise.png" alt="Pourquoi Choisir DevCom" class="valise-img img-fluid">
+        <img src="crayon.jpg" alt="Pourquoi Choisir DevCom" class="valise-img img-fluid">
     </div>
 </section>
 
+
+
+<!-- Section personnelle avec photo et description -->
+<section id="a-propos" class="main-content">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-photo">
+                <img src="photo_CV_2024.png" alt="Votre photo" class="photo">
+            </div>
+            <div class="about-text">
+                <h2>À propos</h2>
+                <p>Actuellement en poste en tant qu'ingénieur environnement, je propose mes services en tant que formateur indépendant en informatique à destination d'un public adulte, étudiant ou enfant (initiation / découverte de la programmation de manière ludique ou perfectionnement, prise en main de logiciels & deep-learning en langage Python).</p>
+                <p>En parallèle de mes fonctions, j'ai également été professeur en lycée / université et formateur pour adultes (sources & justificatifs disponibles).</p>
+                <p>Mon CV est également disponible sur demande : n'hésitez pas à me contacter pour plus d'informations :)</p>
+                <p>(Devis gratuit, tarifs selon la demande et l'emplacement géographique)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 <!-- Contact Form -->
 <section id="contact" class="contact-form py-5 text-center">
-    <h2>Contactez-moi</h2>
+    <h2>Contact</h2>
     <form action="https://formspree.io/f/xzzdgaka" method="POST">
         <input type="text" name="nom" class="form-control mb-3" placeholder="Votre nom" required>
         <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
@@ -157,13 +190,17 @@
         <button type="submit" class="btn btn-primary">Envoyer</button>
     </form>
 </section>
-    </main>
+</main>
 
-    <!-- Footer -->
-    <footer class="text-center py-4 bg-dark text-white">
-        <p>&copy; 2025 DevCom. Tous droits réservés.</p>
-    </footer>
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-white">
+    <p>&copy; 2025 DevCom. Tous droits réservés.</p>
+    <div>
+        <a href="mentions-legales.html" class="text-white mx-3">Mentions Légales</a>
+        <a href="cgv.html" class="text-white mx-3">CGV</a>
+    </div>
+</footer>
 
-    <script src="Accueil_fichiers/bootstrap.min_002.js"></script>
+<script src="Accueil_fichiers/bootstrap.min_002.js"></script>
 </body>
 </html>
