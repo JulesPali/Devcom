@@ -1,3 +1,4 @@
+/* Mise en page générale */
 * {
     margin: 0;
     padding: 0;
@@ -6,86 +7,218 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    background-color: rgb(240, 243, 255); /* Bleu pâle clair et pastel */
+    color: #333;
+    scroll-behavior: smooth; /* Ajout du défilement fluide */
 }
 
-header {
-    background-color: #333;
+/* Bandeau du haut */
+.header {
+    background-color: #a2c8ff; /* Bleu clair pour le header */
     color: white;
-    padding: 20px;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-header h1 {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: inline;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.container {
-    width: 80%;
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
     margin: 0 auto;
 }
 
-main {
-    padding: 20px;
-    background-color: white;
-    margin-top: 20px;
+.header h1 {
+    font-size: 1.5rem;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
+.header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header nav ul li {
+    display: inline;
+}
+
+.header nav ul li a {
+    text-decoration: none;
     color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-form {
+.header nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Section Image principale */
+.hero {
+    margin-top: 70px; /* Décalage pour le header fixe */
+    text-align: center;
+}
+
+.hero .hero-img {
+    width: 80%; /* Ajustement de la taille */
+    max-width: 1200px;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Section principale - photo et description */
+.main-content {
+    padding: 60px 0;
+}
+
+.about {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-photo {
+    flex: 1;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0066cc;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Section Formulaire de contact */
+.contact {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-form label {
-    margin: 10px 0 5px;
+.contact-form .form-group {
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
 }
 
-form input, form textarea {
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
-form button {
-    padding: 10px;
-    background-color: #333;
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form .btn-submit {
+    background-color: #0066cc;
     color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-form button:hover {
-    background-color: #555;
+.contact-form .btn-submit:hover {
+    background-color: #004a99;
 }
 
-#form-message {
-    margin-top: 20px;
-    font-weight: bold;
+/* Style pour la photo */
+.photo {
+    display: block; /* Pour s'assurer que l'image est un bloc et ne s'affiche pas à côté du texte */
+    max-width: 200px; /* Limite la largeur de l'image */
+    margin-right: 20px; /* Espace de 20px à droite de l'image */
+    margin-top: 20px; /* Espace de 20px au-dessus de l'image */
+    margin-left: auto; /* Centre l'image sur la page */
+    margin-right: auto; /* Centre l'image sur la page */
+    border-radius: 50%; /* Arrondit l'image pour en faire une bulle */
 }
+
+/* Footer */
+footer {
+    background-color: #a2c8ff; /* Même bleu clair que le header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer nav ul li a:hover {
+    color: #ff6347;
+}
+
