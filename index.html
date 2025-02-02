@@ -1,35 +1,172 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Simple</title>
+    <title>Mon Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
+    <!-- Bandeau du haut -->
+    <header class="header">
         <div class="container">
-            <h1>Bienvenue sur mon site</h1>
+            <div class="logo">
+                <h1>Welcome !</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li> <!-- Lien vers la section Contact -->
+                    <li><a href="https://www.linkedin.com/in/jules-pali-0b1744334/" target="_blank">LinkedIn</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section>
-            <h2>À propos</h2>
-            <p>Ceci est un site simple pour démontrer l'utilisation de HTML, CSS et JavaScript.</p>
+    <!-- Image principale au centre -->
+    <section class="hero">
+        <img src="plaquette.png" alt="Image principale" class="hero-img">
+    </section>
+
+    <!-- Section personnelle avec photo et description -->
+    <main class="main-content">
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-photo">
+                        <img src="photo_CV_2024.png" alt="Votre photo" class="photo">
+                    </div>
+                    <div class="about-text">
+                        <h2>À propos :</h2>
+                        <p>Actuellement en poste en tant qu'ingénieur environnement, je propose mes services en tant que formateur indépendant en informatique à destination d'un public adulte, étudiant ou enfant (initiation / découverte de la programmation de manière ludique ou perfectionnement, prise en main de logiciels & deep-learning en langage Python).</p>
+                        <p>En parallèle de mes fonctions, j'ai également été professeur en lycée / université et formateur pour adultes (sources & justificatifs disponibles).</p>
+                        <p>Mon CV est également disponible sur demande : n'hésitez pas à me contacter pour plus d'informations :)</p>
+                        <p>(Devis gratuit, tarifs selon la demande et l'emplacement géographique)</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Formulaire de contact avec ancre "contact" -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/xzzdgaka" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Votre email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Votre message"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+			
+
+    <!-- Message de confirmation -->
+    <div id="confirmation-popup" style="display:none;">
+        <div class="popup-content">
+            <p>Votre message a été envoyé avec succès !</p>
+            <button onclick="closePopup()">Fermer</button>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour afficher le pop-up
+        const form = document.getElementById('contact-form');
+        const popup = document.getElementById('confirmation-popup');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+
+            // Envoi du formulaire via Formspree
+            fetch(form.action, {
+                method: form.method,
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: new FormData(form)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    // Si l'envoi est réussi, afficher le pop-up
+                    popup.style.display = 'block';
+                } else {
+                    alert('Erreur lors de l\'envoi du message.');
+                }
+            })
+            .catch(error => {
+                alert('Erreur lors de l\'envoi du message.');
+            });
+        });
+
+        // Fonction pour fermer le pop-up
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+    </script>
+
+    <style>
+        /* Style pour le pop-up */
+        #confirmation-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+        </div>
+    </section>
+
+    <!-- Footer avec les liens classiques -->
     <footer>
-        <p>&copy; 2025 Mon Site. Tous droits réservés.</p>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="mailto:jules.pali@hotmail.fr">Email</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 
 </body>
+
 </html>
+
