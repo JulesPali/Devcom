@@ -13,7 +13,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('https://images.unsplash.com/photo-1654686534917-bc9b4c7a652a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NDMzMTF8MHwxfHNlYXJjaHwyfHxpbmRlcGVuZGVudCUyMHRyYWluZXJ8ZW58MHwwfDN8fDE3Mzg1MTc2Njl8MA&ixlib=rb-4.0.3&q=80&w=1080');
+    background-image: url("valise_rect.png");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -109,5 +109,45 @@ body {
     /* Ajout de styles spécifiques pour les images */
     .valise-img {
         max-width: 100%;
+    }
+}
+
+
+
+
+/* Global reset and styles for valise-img */
+.valise-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* S'assurer que l'image ne dépasse pas la largeur de la colonne */
+    margin: 0 auto;
+    display: block;
+}
+
+/* Flexbox ajustements pour les sections */
+.section-type-1, .section-type-2 {
+    padding: 3rem 0;
+}
+
+.section-type-1 .col-md-6,
+.section-type-2 .col-md-6 {
+    display: flex;
+    align-items: center; /* Aligne le contenu (texte) verticalement au centre */
+    justify-content: center; /* Centre horizontalement les éléments */
+}
+
+.section-type-1 .col-12,
+.section-type-2 .col-12 {
+    display: flex;
+    align-items: center; /* Aligne les éléments au centre sur petits écrans */
+    justify-content: center; /* Centre le contenu */
+    text-align: center; /* Assure que le texte est centré */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .valise-img {
+        max-width: 100%;
+        height: auto; /* Réduit la taille de l'image pour mobile */
     }
 }
