@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -66,7 +66,7 @@ body {
 
 .hero .hero-img {
     width: 80%; /* Ajustement de la taille */
-    max-width: 1200px;
+    max-width: 600px;
     height: auto;
     object-fit: cover;
     margin: 0 auto;
@@ -186,7 +186,7 @@ body {
 /* Style pour la photo */
 .photo {
     display: block; /* Pour s'assurer que l'image est un bloc et ne s'affiche pas à côté du texte */
-    max-width: 200px; /* Limite la largeur de l'image */
+    max-width: 50px; /* Limite la largeur de l'image */
     margin-right: 20px; /* Espace de 20px à droite de l'image */
     margin-top: 20px; /* Espace de 20px au-dessus de l'image */
     margin-left: auto; /* Centre l'image sur la page */
@@ -221,4 +221,3 @@ footer nav ul li a {
 footer nav ul li a:hover {
     color: #ff6347;
 }
-
