@@ -114,7 +114,6 @@ body {
 
 
 
-
 /* Global reset and styles for valise-img */
 .valise-img {
     width: 100%;
@@ -129,25 +128,35 @@ body {
     padding: 3rem 0;
 }
 
-.section-type-1 .col-md-6,
-.section-type-2 .col-md-6 {
-    display: flex;
-    align-items: center; /* Aligne le contenu (texte) verticalement au centre */
-    justify-content: center; /* Centre horizontalement les éléments */
-}
-
-.section-type-1 .col-12,
-.section-type-2 .col-12 {
-    display: flex;
-    align-items: center; /* Aligne les éléments au centre sur petits écrans */
-    justify-content: center; /* Centre le contenu */
-    text-align: center; /* Assure que le texte est centré */
-}
-
-/* Responsivité */
+/* Responsivité et ordre des éléments */
 @media (max-width: 768px) {
+    .section-type-1 .col-12,
+    .section-type-2 .col-12 {
+        text-align: center;
+    }
+
+    .section-type-1 .col-md-6,
+    .section-type-2 .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Changer l'ordre des éléments sur mobile */
+    .section-type-1 .col-12.order-2,
+    .section-type-2 .col-12.order-2 {
+        order: 1;
+    }
+
+    .section-type-1 .col-12.order-1,
+    .section-type-2 .col-12.order-1 {
+        order: 2;
+    }
+
+    /* Image responsive */
     .valise-img {
         max-width: 100%;
-        height: auto; /* Réduit la taille de l'image pour mobile */
+        height: auto;
     }
 }
