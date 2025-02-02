@@ -1,0 +1,197 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    --primary-color: #e64a19;
+    /* Orange foncé pour stimuler l'appétit */
+    --secondary-color: #8bc34a;
+    /* Vert vif pour la fraîcheur des ingrédients */
+    --success-color: #4caf50;
+    /* Vert moyen pour une ambiance agréable */
+    --info-color: #2196f3;
+    /* Bleu classique pour une touche de sophistication */
+    --accent-color: #ff9800;
+    /* Orange pour attirer l'attention */
+    --danger-color: #e53935;
+    /* Rouge vif pour les accents et les promotions */
+    --light-color: #fdfdfd;
+    /* Blanc cassé pour une atmosphère lumineuse */
+    --background-color: #455a64;
+    /* Gris-bleu foncé pour la profondeur */
+    --text-color: #333;
+    /* Noir foncé pour le texte principal */
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    color: var(--text-color);
+}
+
+.navbar-brand img {
+    width: 80px;
+}
+
+.navbar {
+    font-size: 1.2rem;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+main {
+    position: relative;
+}
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+ul {
+    padding: 0px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.border-left {
+    border-left: 1px solid var(--light-color);
+}
+
+.border-right {
+    border-right: 1px solid var(--light-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.card {
+    margin-bottom: 25px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.contact-page .contact-form {
+    background: transparent;
+}
+
+.contact-page .contact-form .form-control {
+    border: 1px #dedede solid;
+}
+
+.back-to-top-on-scroll {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+    z-index: 999;
+    animation: expload-animation .8s ease;
+}
+
+@keyframes expload-animation {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0px;
+        font-size: 0px;
+    }
+
+    80% {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        opacity: 1;
+        font-size: 50px;
+    }
+
+    100% {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        opacity: 1;
+        font-size: 30px;
+    }
+}
+
+.form-control {
+    text-align: left;
+}
+
+.btn.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.dropdown-wg {
+    margin-left: -100px;
+    background-color: var(--background-color) !important;
+    color: var(--light-color);
+    box-shadow: var(--background-color) 0px 0px 10px;
+    border: none !important;
+}
+
+.dropdown-item-lang {
+    color: var(--light-color);
+}
+
+/* .dropdown-wg .dropdown-menu:hover {
+    background-color: var(--light-color);
+    color: var(--background-color);
+} */
+
+/* on mobile */
+@media (max-width: 768px) {
+    .dropdown-wg {
+        margin-left: 0px;
+        background-color: var(--light-color);
+        color: var(--background-color);
+    }
+
+    .dropdown-wg .dropdown-menu {
+        background-color: var(--light-color);
+        color: var(--background-color);
+        border: none !important;
+    }
+}
+
+div.card-image-container {
+    max-height: 150px;
+    overflow: hidden;
+}
