@@ -113,7 +113,6 @@ body {
 }
 
 
-
 /* Responsivité pour les images */
 .valise-img {
     width: 100%;
@@ -151,9 +150,6 @@ body {
     }
 }
 
-
-
-
 .about {
     background-color: #ffffff;
     padding: 40px 0;
@@ -175,6 +171,11 @@ body {
     flex: 1;
 }
 
+
+
+
+
+
 /* Style général pour la photo */
 .photo {
     width: 150px;
@@ -194,10 +195,40 @@ body {
     }
 }
 
+
+
+
+
+
+/* Conteneur général pour la photo et le texte */
+.conteneur {
+    display: flex;
+    align-items: center;  /* Centre verticalement */
+    gap: 20px;  /* Espacement entre la photo et le texte */
+}
+
+/* Style pour la photo */
+.about-photo {
+    flex-shrink: 0;  /* Empêche la photo de rétrécir */
+}
+
+/* Responsive - Passer en colonne sur mobile */
+@media (max-width: 768px) {
+    .conteneur {
+        flex-direction: column;  /* Afficher la photo en premier, texte en dessous */
+        text-align: center;  /* Centrer le texte */
+    }
+}
+
+
+
+
+
+
+
+
 .about-text {
     flex: 2;
-	
-	
 	
 /* Section pour la grande image */
 .hero-section {
