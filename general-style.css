@@ -1,11 +1,77 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Cela garantit que les bordures et le padding sont inclus dans les dimensions */
 }
 
+/* Définir une nouvelle couleur pour le violet foncé */
+:root {
+    --dark-violet: #5D2F8E; /* Violet foncé */
+}
+
+
+.card-body {
+    background-color: #ffffff;
+    border: 1px solid #007bff; /* Bordure légère, bleu clair */
+    border-radius: 12px;  /* Coins arrondis plus doux */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Ombre subtile */
+}
+
+.card-body img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;  /* Coins arrondis pour l'image */
+}
+
+
+.card-body h3 {
+    font-size: 1.5rem; /* Taille du texte */
+    font-weight: bold; /* Gras */
+    color: var(--primary-color); /* Utilise ta couleur principale pour le texte */
+    text-transform: uppercase; /* Majuscules pour plus d'impact */
+    letter-spacing: 1px; /* Espacement des lettres */
+    margin-bottom: 20px; /* Espace sous le titre */
+    position: relative;
+}
+
+
+/* Ajoute un effet d'ombre légère */
+.card-body h3 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+/* Effet hover pour un effet interactif */
+.card-body h3:hover {
+    color: var(--dark-violet); /* Change de couleur au survol */
+    cursor: pointer;
+}
+/* Si tu veux avoir un peu plus de relief sur le texte */
+.card-body h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.separation img {
+    max-width: 200px; /* Limite la largeur à 400px, tu peux ajuster selon tes besoins */
+    width: 100%; /* Garder l'image responsive, s'ajuste à la largeur du conteneur */
+    height: auto; /* Conserver le ratio d'aspect de l'image */
+}
+
+
+
+
+
+
 html {
-    --primary-color: #e64a19;
-    /* Orange foncé pour stimuler l'appétit */
+    --primary-color: rgba(0, 0, 0);
+    /* noir pour stimuler l'appétit */
     --secondary-color: #8bc34a;
     /* Vert vif pour la fraîcheur des ingrédients */
     --success-color: #4caf50;
@@ -194,4 +260,9 @@ a:hover {
 div.card-image-container {
     max-height: 150px;
     overflow: hidden;
+}
+
+
+textarea.form-control {
+    height: 200px; /* Ajuste la hauteur selon tes besoins */
 }
