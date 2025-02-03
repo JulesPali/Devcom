@@ -198,8 +198,6 @@ body {
 
 
 
-
-
 /* Conteneur général pour la photo et le texte */
 .conteneur {
     display: flex;
@@ -223,10 +221,6 @@ body {
 
 
 
-
-
-
-
 .about-text {
     flex: 2;
 	
@@ -239,4 +233,5 @@ body {
     max-height: 500px; /* Limiter la hauteur de l'image si nécessaire */
     object-fit: cover; /* Assure que l'image garde son ratio et s'ajuste bien */
 }
+
 
