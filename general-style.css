@@ -64,6 +64,12 @@
     height: auto; /* Conserver le ratio d'aspect de l'image */
 }
 
+section.section-type-1 h2 {
+    margin-top: 20px; /* Ajuste la valeur pour l'espacement voulu */
+}
+section.section-type-2 h2 {
+    margin-top: 20px; /* Ajuste la valeur pour l'espacement voulu */
+}
 
 
 
